@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa; /* Updated background color for the entire page */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .navbar {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            margin-top: 80px; /* Add margin to accommodate fixed navbar */
+        }
+        
+        h1 {
+            color: #fff;
+            background-color: #ff6f61; /* Updated background color for h1 */
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #007bff;
+            text-align: center;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            resize: none;
+        }
+        
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        a {
+            display: block;
+            text-align: center;
+            color: #007bff;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Fake News Detector</h1>
+    <form action="/result" method="post">
+        <label for="news">Enter news text or link:</label><br>
+        <textarea name="news" rows="10" cols="80" placeholder="Enter news text or link here..."></textarea><br>
+        <input type="submit" value="Check News">
+    </form>
+</body>
+</html>
